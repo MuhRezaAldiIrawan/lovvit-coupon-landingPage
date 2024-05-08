@@ -6,6 +6,7 @@ function outletCode(act) {
         setTimeout(function() {
             $("#numberpad").css('transform', 'translateX(0)');  // Mulai animasi
         }, 100);
+
     } else if (act === "back"){
         $(".numberpad").css('display', 'none');
         $(".couponpage").css('display', ''); 
@@ -13,6 +14,7 @@ function outletCode(act) {
         setTimeout(function() {
             $("#numberpad").css('transform', 'translateX(100%)');  // Mulai animasi
         }, 100);
+
     }
     
 }
