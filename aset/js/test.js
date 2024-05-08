@@ -1,6 +1,6 @@
 function outletCode(act) {
     if (act === "open") {
-        $(".numberpad").css('display', ''); // remove style display none
+        $(".numberpad").css('display', ''); 
         $(".couponpage").css('display', 'none');
 
         setTimeout(function() {
