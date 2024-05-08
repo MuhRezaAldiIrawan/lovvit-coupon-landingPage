@@ -7,7 +7,7 @@ function outletCode(act) {
             $("#numberpad").css('transform', 'translateX(0)');  // Mulai animasi
         }, 100);
     } else if (act === "back"){
-        $(".numberpad").css('display', 'none'); // remove style display none
+        $(".numberpad").css('display', 'none');
         $(".couponpage").css('display', ''); 
 
         setTimeout(function() {
