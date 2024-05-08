@@ -8,7 +8,7 @@ function outletCode(act) {
         }, 100);
     } else if (act === "back"){
         $(".numberpad").css('display', 'none'); // remove style display none
-        $(".couponpage").css('display', ''); // kembalikan seperti semula
+        $(".couponpage").css('display', ''); 
 
         setTimeout(function() {
             $("#numberpad").css('transform', 'translateX(100%)');  // Mulai animasi
