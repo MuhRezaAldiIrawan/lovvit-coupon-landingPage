@@ -3,15 +3,33 @@
 function outletCode(act) {
     if (act === "open") {
         console.log("button tukar kupon ditekan");
-        $("#couponpage").show().animate({ left: '-100%' }, 300, function() {
+        $("#couponpage").show().animate({ left: '-100%' }, 300, function () {
             $(this).hide();
         });
         $("#numberpad").css('left', '100%').show().animate({ left: '0' }, 300);
     } else if (act === "back") {
-        $("#numberpad").animate({ left: '100%' }, 300, function() {
+        $("#numberpad").animate({ left: '100%' }, 300, function () {
             $(this).hide();
         });
         $("#couponpage").css('left', '-100%').show().animate({ left: '0' }, 300);
+    } else if (act === "backpad") {
+        $("#phonenumber").animate({ left: '100%' }, 300, function () {
+            $(this).hide();
+        });
+        $("#numberpad").css('left', '-100%').show().animate({ left: '0' }, 300);
+    }
+    else if (act === "next") {
+        console.log("button next ditekan");
+        $("#numberpad").animate({ left: '-100%' }, 300, function () {
+            $(this).hide();
+        });
+        $("#phonenumber").css('left', '100%').show().animate({ left: '0' }, 300);
+    } else if (act === "final-step") {
+        console.log("button final ditekan");
+        $(".phonenumber").fadeOut(300, function () {
+            $(".finalstep").fadeIn(300);
+        });
+        $(".finalstep").fadeIn(300);
     }
 }
 
@@ -95,5 +113,7 @@ $(document).ready(function () {
         return false;
     });
 });
+
+
 
 
