@@ -1,32 +1,69 @@
+// function outletCode(act) {
+//     if (act === "open") {
+//         console.log("button tukar kupon ditekan");
+//         $(".numberpad").css('display', ''); 
+//         $(".couponpage").css('display', 'none');
+
+//         // document.getElementById('couponpage').classList.add('out');
+//         // document.getElementById('numberpad').classList.add('active');
+//         // document.getElementById('numberpad').classList.remove('out');
+
+//         // setTimeout(function() {
+//         //     $("#numberpad").css('transform', 'translateX(0)');  // Mulai animasi
+//         // }, 100);
+
+//     } else if (act === "back"){
+//         $(".numberpad").css('display', 'none');
+//         $(".couponpage").css('display', ''); 
+
+//         // document.getElementById('couponpage').classList.remove('out');
+//         // document.getElementById('numberpad').classList.remove('active');
+//         // document.getElementById('couponpage').classList.add('active');
+
+//         // setTimeout(function() {
+//         //     $("#numberpad").css('transform', 'translateX(100%)');  // Mulai animasi
+//         // }, 100);
+
+//     }
+    
+// }
+
+// function outletCode(act) {
+//     if (act === "open") {
+//         console.log("button tukar kupon ditekan");
+//         $(".couponpage").slideUp(300, function() {
+//             $(".numberpad").slideDown(300);
+//         });
+//         // $(".numberpad").css('display', ''); 
+//         // $(".couponpage").css('display', 'none');
+
+
+//     } else if (act === "back"){
+//         $(".numberpad").slideUp(300, function() {
+//             $(".couponpage").slideDown(300);
+//         });
+//         // $(".numberpad").css('display', 'none');
+//         // $(".couponpage").css('display', ''); 
+
+//     }
+    
+// }
+
 function outletCode(act) {
     if (act === "open") {
         console.log("button tukar kupon ditekan");
-        $(".numberpad").css('display', ''); 
-        $(".couponpage").css('display', 'none');
-
-        // document.getElementById('couponpage').classList.add('out');
-        // document.getElementById('numberpad').classList.add('active');
-        // document.getElementById('numberpad').classList.remove('out');
-
-        setTimeout(function() {
-            $("#numberpad").css('transform', 'translateX(0)');  // Mulai animasi
-        }, 100);
-
-    } else if (act === "back"){
-        $(".numberpad").css('display', 'none');
-        $(".couponpage").css('display', ''); 
-
-        // document.getElementById('couponpage').classList.remove('out');
-        // document.getElementById('numberpad').classList.remove('active');
-        // document.getElementById('couponpage').classList.add('active');
-
-        setTimeout(function() {
-            $("#numberpad").css('transform', 'translateX(100%)');  // Mulai animasi
-        }, 100);
-
+        $("#couponpage").show().animate({ left: '-100%' }, 300, function() {
+            $(this).hide();
+        });
+        $("#numberpad").css('left', '100%').show().animate({ left: '0' }, 300);
+    } else if (act === "back") {
+        $("#numberpad").animate({ left: '100%' }, 300, function() {
+            $(this).hide();
+        });
+        $("#couponpage").css('left', '-100%').show().animate({ left: '0' }, 300);
     }
-    
 }
+
 // script.js
 // script.js
 // script.js
