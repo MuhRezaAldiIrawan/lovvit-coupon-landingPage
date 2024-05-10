@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="container couponpage" id="couponpage" >
+    <div class="container" id="couponpage" >
         <div class="image-logo">
             <img src="aset/images/dunkin.png" alt="logo" class="logo">
         </div>
@@ -31,7 +31,7 @@
                 <div class="card-body">
                     <h1 class="card-title">Redeem Coupon di Outlet Dunkin</h1>
                     <a href="#" style="color: inherit; text-decoration:none;" class="btn-link">
-                        <button class="btn btn-primary button-tkr" onclick="outletCode('open')">Tukar Kupon</button>
+                        <button class="btn btn-primary button-tkr" id="gotoNumberpad" onclick="outletCode('open')">Tukar Kupon</button>
                     </a>
                     <h1 class="card-text">Berlaku hingga: 8 Agustus 2024</h1>
                     <div class="accordion-item" style="border: none; margin-top: 20px;">
@@ -67,9 +67,9 @@
         </div>
     </div>
 
-    <div class="container numberpad" id="numberpad" style="display: none;">
+    <div class="container" id="numberpad">
         <div class="image-logo">
-            <img src="aset/images/arrow-left-solid.svg" alt="" class="back-arrow"  onclick="outletCode('back')">
+            <img src="aset/images/arrow-left-solid.svg" alt="" class="back-arrow"  id="gotoCouponpage" onclick="outletCode('back')">
             <img src="aset/images/dunkin.png" alt="logo" class="logo">
         </div>
         <div class="card-container">
