@@ -30,34 +30,39 @@
 }
 
 .card {
-    border-radius: 10px;
+    border: none;
+    /* border-radius: 10px; */
     /*ubah menjadi lingkaran*/
-    border: 1px solid rgba(166, 166, 166, 0.5);
+    /* border: 1px solid rgba(166, 166, 166, 0.5); */
     box-shadow: -7px 0 10px -5px rgba(156, 154, 154, 0.75),
         7px 0 10px -5px rgba(156, 154, 154, 0.75),
         0 -7px 10px -5px rgba(156, 154, 154, 0.75);
-    position: relative;
+    /* position: relative; */
 }
 
 .circle-b {
     position: absolute;
     top: 530px;
-    right: -10px;
+    right: 0px;
     width: 1.3rem;
     height: 2.3rem;
-    background-color: #ffffff;
-    border-radius: 100%;
-
+    background-color: #ebebeb;
+    border-radius: 50rem 0rem 0rem 50rem;
+    border-top: #ebebeb 1px solid;
+    border-left: #ebebeb 1px solid;
+    border-bottom: #ebebeb 1px solid;
 }
 
 .circle-a {
     position: absolute;
     top: 530px;
-    left: -8px;
     width: 1.3rem;
     height: 2.3rem;
-    background-color: #ffffff;
-    border-radius: 100%;
+    background-color: #ebebeb;
+    border-radius: 0rem 50rem 50rem 0rem;
+    border-right: #ebebeb 1px solid;
+    border-top: #ebebeb 1px solid;
+    border-bottom: #ebebeb 1px solid;
 }
 
 
@@ -286,33 +291,6 @@ button-tkr:focus::before {
     width: 80px;
 }
 
-/* #numberpad{
-    transition: transform 0.5s ease-in-out;
-} */
-
-/* #couponpage{
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in-out;
-} */
-
-/* styles.css */
-/* styles.css */
-/* styles.css */
-/* styles.css */
-
-
-/* .container {
-    transition: transform 0.5s ease-in-out;
-}
-
-.container.active {
-    transform: translateX(0);
-}
-
-.container.out {
-    transform: translateX(-100%);
-} */
-
 .container {
     /* overflow: hidden; */
     width: 100%;
@@ -324,6 +302,28 @@ button-tkr:focus::before {
     position: absolute;
     width: 100%;
     height: 100%;
+}
+
+
+.popout {
+    animation: popout 1s ease;
+    -webkit-animation: popout 1s ease;
+}
+
+.scroll{
+    overflow-y: scroll;
+    max-height: 370px;
+}
+
+@keyframes popout {
+    from{transform:scale(0)}
+    80%{transform:scale(1.1)}
+    to{transform:scale(1)}
+}
+@-webkit-keyframes popout {
+    from{-webkit-transform:scale(0)}
+    80%{-webkit-transform:scale(1.1)}
+    to{-webkit-transform:scale(1)}
 }
 
 @media screen and (min-width: 600px) {
@@ -339,4 +339,33 @@ button-tkr:focus::before {
         margin-bottom: 3%;
     
     }
+}
+
+@media screen and (min-width: 200px) and ( max-width: 300px) {
+    
+    .circle-b {
+        position: absolute;
+        top: 515px;
+        right: 0px;
+        width: 1.3rem;
+        height: 2.3rem;
+        background-color: #ebebeb;
+        border-radius: 50rem 0rem 0rem 50rem;
+        border-top: #ebebeb 1px solid;
+        border-left: #ebebeb 1px solid;
+        border-bottom: #ebebeb 1px solid;
+    }
+    
+    .circle-a {
+        position: absolute;
+        top: 515px;
+        width: 1.3rem;
+        height: 2.3rem;
+        background-color: #ebebeb;
+        border-radius: 0rem 50rem 50rem 0rem;
+        border-right: #ebebeb 1px solid;
+        border-top: #ebebeb 1px solid;
+        border-bottom: #ebebeb 1px solid;
+    }
+
 }
