@@ -281,7 +281,6 @@
 }
 
 /* #numberpad{
-    transform: translateX(100%);
     transition: transform 0.5s ease-in-out;
 } */
 
@@ -290,33 +289,33 @@
     transition: transform 0.5s ease-in-out;
 } */
 
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden; /* Memastikan tidak ada scrollbar yang muncul */
-    position: relative; /* Menetapkan referensi untuk positioning */
-}
+/* styles.css */
+/* styles.css */
+/* styles.css */
+/* styles.css */
+
 
 .container {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0; /* Mulai dari posisi nol */
-    background-color: white;
-    transform: translateX(100%); /* Awalnya diletakkan 100% ke kanan dari titik awal */
+
     transition: transform 0.5s ease-in-out;
-    
 }
 
 .container.active {
-    transform: translateX(0); /* Pusatkan di viewport */
+    transform: translateX(0);
 }
 
 .container.out {
-    transform: translateX(-100%); /* Pindahkan 100% ke kiri dari titik awal */
+    transform: translateX(-100%);
 }
+
+
+
+
+
+
+
+
+
 
 
 

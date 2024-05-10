@@ -1,51 +1,93 @@
-// function outletCode(act) {
-//     if (act === "open") {
-//         // $(".numberpad").css('display', ''); 
-//         // $(".couponpage").css('display', 'none');
+function outletCode(act) {
+    if (act === "open") {
+        console.log("button tukar kupon ditekan");
+        $(".numberpad").css('display', ''); 
+        $(".couponpage").css('display', 'none');
 
-//         // setTimeout(function() {
-//         //     $("#numberpad").css('transform', 'translateX(0)');  // Mulai animasi
-//         // }, 100);
+        // document.getElementById('couponpage').classList.add('out');
+        // document.getElementById('numberpad').classList.add('active');
+        // document.getElementById('numberpad').classList.remove('out');
 
-//     // } else if (act === "back"){
-//     //     $(".numberpad").css('display', 'none');
-//     //     $(".couponpage").css('display', ''); 
+        setTimeout(function() {
+            $("#numberpad").css('transform', 'translateX(0)');  // Mulai animasi
+        }, 100);
 
-//         // setTimeout(function() {
-//         //     $("#numberpad").css('transform', 'translateX(100%)');  // Mulai animasi
-//         // }, 100);
+    } else if (act === "back"){
+        $(".numberpad").css('display', 'none');
+        $(".couponpage").css('display', ''); 
 
-//     }
+        // document.getElementById('couponpage').classList.remove('out');
+        // document.getElementById('numberpad').classList.remove('active');
+        // document.getElementById('couponpage').classList.add('active');
+
+        setTimeout(function() {
+            $("#numberpad").css('transform', 'translateX(100%)');  // Mulai animasi
+        }, 100);
+
+    }
     
-// }
+}
 // script.js
 // script.js
-document.getElementById('gotoNumberpad').addEventListener('click', function() {
-    const couponPage = document.getElementById('couponpage');
-    const numberPad = document.getElementById('numberpad');
-    couponPage.classList.add('out');
-    numberPad.classList.add('active');
-    setTimeout(() => {
-        couponPage.classList.remove('active');
-    }, 500); // Tunggu animasi selesai, lalu hapus 'active' dari couponPage
-});
+// script.js
+// script.js
+// script.js
+// script.js
 
-document.getElementById('gotoCouponpage').addEventListener('click', function() {
-    const couponPage = document.getElementById('couponpage');
-    const numberPad = document.getElementById('numberpad');
-    numberPad.classList.remove('active');  // Langsung hapus 'active' dari numberPad
-    numberPad.style.transform = 'translateX(100%)';  // Reset posisi numberPad
-    couponPage.classList.remove('out');
-    couponPage.classList.add('active');
-    setTimeout(() => {
-        numberPad.style.transform = '';  // Reset transform supaya kembali ke state semula
-    }, 500); // Tunggu animasi selesai
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//     document.getElementById('couponpage').classList.add('active');
+// });
 
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('couponpage').classList.add('active');
-    document.getElementById('numberpad').classList.remove('active');
-});
+// document.getElementById('gotoNumberpad').addEventListener('click', function() {
+//     document.getElementById('couponpage').classList.add('out');
+//     document.getElementById('numberpad').classList.add('active');
+//     document.getElementById('numberpad').classList.remove('out');
+// });
+
+// document.getElementById('gotoCouponpage').addEventListener('click', function() {
+//     document.getElementById('couponpage').classList.remove('out');
+//     document.getElementById('numberpad').classList.remove('active');
+//     document.getElementById('couponpage').classList.add('active');
+// });
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Initially activate the coupon page
+//     var couponPage = document.getElementById('couponpage');
+//     var numberPad = document.getElementById('numberpad');
+
+//     couponPage.classList.add('active');
+//     numberPad.style.display = 'none'; // Initially hide numberpad
+
+//     // Handle transition to number pad
+//     document.getElementById('gotoNumberpad').addEventListener('click', function() {
+//         couponPage.classList.add('out');
+//         couponPage.addEventListener('transitionend', function() {
+//             couponPage.classList.remove('active');
+//             numberPad.style.display = 'block'; // Make numberpad visible before sliding in
+//             numberPad.classList.add('active');
+//         }, { once: true });
+//     });
+
+//     // Handle transition back to coupon page
+//     document.getElementById('gotoCouponpage').addEventListener('click', function() {
+//         numberPad.classList.remove('active');
+//         numberPad.addEventListener('transitionend', function() {
+//             numberPad.style.display = 'none'; // Hide numberpad after it slides out
+//             couponPage.classList.remove('out');
+//             couponPage.classList.add('active');
+//         }, { once: true });
+//     });
+// });
+
+
+// script.js
+
+
+
+
+
+
+
 
 
 
