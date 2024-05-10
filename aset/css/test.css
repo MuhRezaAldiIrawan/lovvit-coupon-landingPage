@@ -326,8 +326,8 @@ button-tkr:focus::before {
     height: 100%;
 }
 
-/* @media screen and (min-width: 992px) {
-     .container{
+@media screen and (min-width: 600px) {
+    .container{
         margin-left: 15%;
-     }
-} */
+    }
+}
