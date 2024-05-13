@@ -31,18 +31,14 @@
 
 .card {
     border: none;
-    /* border-radius: 10px; */
-    /*ubah menjadi lingkaran*/
-    /* border: 1px solid rgba(166, 166, 166, 0.5); */
-    box-shadow: -7px 0 10px -5px rgba(156, 154, 154, 0.75),
+    /* box-shadow: -7px 0 10px -5px rgba(156, 154, 154, 0.75),
         7px 0 10px -5px rgba(156, 154, 154, 0.75),
-        0 -7px 10px -5px rgba(156, 154, 154, 0.75);
-    /* position: relative; */
+        0 -7px 10px -5px rgba(156, 154, 154, 0.75); */
 }
 
 .circle-b {
     position: absolute;
-    top: 530px;
+    top: 554px;
     right: 0px;
     width: 1.3rem;
     height: 2.3rem;
@@ -55,7 +51,7 @@
 
 .circle-a {
     position: absolute;
-    top: 530px;
+    top: 554px;
     width: 1.3rem;
     height: 2.3rem;
     background-color: #ebebeb;
@@ -65,17 +61,24 @@
     border-bottom: #ebebeb 1px solid;
 }
 
+/* .shadow-top-left-right{
+    border: #E61610 1px solid;
+    border-bottom: none;
+} */
+
 
 
 
 .card-body {
-    /* border-top: 2px dashed rgba(166, 166, 166, 0.5); */
-    background-image: linear-gradient(to top, #f9e507b6 0%, #FFFFFF 100%);
-    padding: 17px 0px 20px 0px;
+    border: none;
+    border-radius: 0px 0px 5px 5px;
+    background-image: linear-gradient( to top, #f9e50796 0%, #ffffff 100%); 
+    width: 18rem; 
 }
 
 
 .dashed {
+    margin-top: 20px;
     border-top: 5px dashed rgba(166, 166, 166, 0.5);
 }
 
@@ -104,10 +107,6 @@
     margin-top: 15px;
 }
 
-/* .shadow-bottom-left-right{
-    box-shadow: 0 7px 10px -5px rgba(156, 154, 154, 0.75),
-                0 -7px 10px -5px rgba(156, 154, 154, 0.75);
-} */
 
 .button-tkr {
     background-color: #E61610;
